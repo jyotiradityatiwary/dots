@@ -2,13 +2,13 @@ git
 neovim
 sway
 wl-clipboard
-clipman
 mako
 kanshi
 nnn
 waybar
 playerctl
 mpv
+mpv-mpris
 zathura
 zathura-pdf-mupdf
 zathura-cb
@@ -30,8 +30,6 @@ fuse2
 xdg-utils
 wireplumber
 pavucontrol
-mpv
-mpris
 htop
 fzf
 slurp
