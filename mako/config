@@ -1,0 +1,25 @@
+on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/message.oga
+#font=monospace 15#1f2b25
+#background-color=#01333055
+background-color=#20253088
+#text-color=#FFFFFFFF
+#width=500
+#height=300
+#outer-margin=30
+#margin=20
+#padding=10
+border-size=0
+#border-color=#013330AA
+border-radius=20
+progress-color=over #04d964AA
+icons=1
+max-icon-size=64
+layer=overlay
+# searches default locations anyway
+#icon-path=""
+#icon-location=left
+markup=1
+actions=1
+history=1
+
+text-alignment=center

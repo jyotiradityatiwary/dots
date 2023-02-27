@@ -1,0 +1,25 @@
+window {
+    border: 2px solid green;
+    background: rgba(0,0,0,0.5);
+}
+
+#input {
+    border: 2px solid green;
+    background-color: #222222;
+    font-size: 18px;
+}
+
+
+#outer-box {
+    margin: 10px;
+}
+
+#scroll {
+    margin: 5px 0px;
+    font-size: 16px;
+    color: #ccc;
+}
+
+#scroll label {
+    margin: 2px 0px;
+}

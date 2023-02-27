@@ -1,0 +1,4 @@
+set icons true
+map D trash
+
+cmd trash $trash-put $fx

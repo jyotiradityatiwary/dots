@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=NNN
+Comment=The command line file manager
+Icon=system-file-manager
+Terminal=true
+Exec=nnn
+Categories=ConsoleOnly;System;FileTools;FileManager
+MimeType=inode/directory;
+Keywords=File;Manager;Browser;Explorer;Launcher

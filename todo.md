@@ -1,0 +1,113 @@
+# To-Do
+
+##  1.0
+
+- [x] add a default wallpaper
+- [ ] typing devnagri script, keybinding for switching scripts
+- [x] lsd and waybar icons
+- [ ] bash vim bindings
+- [ ] in swaylock blurring, instead of saving generated wallpaper to .local/...../lockscreen-current, leave it set to a fallback wallpaper (used only if set using TUI) and else to achieve blur, save it to /tmp/swaylock-wallpaper.sh (or some other name) and remove it on unlock. maybe will speed up by eliminating risk readwrite times
+- [ ] make bottom black bar translucent in zathura
+- [ ] terminal based image viewer (should have touchpad pixel scrolling, inertial scrolling) (feh,sxiv,imv) (see lukesmith's video on sxiv)
+	- [ ] configure for touchpad scrolling
+	- [ ] add to dependancies
+- [ ] zathura zoom with touchpad
+- [ ] add padding
+- [ ] implement suspend functionality. add menu to pick suspend exit shutdown reboot
+	- [ ] closing laptop lid suspends
+- [ ] implement swaylock and swayidle
+- [x] add trash-cli to requiremets. enable trashing instead of delete in nnn and lf. copy config to dots dir
+- [ ] prevent deploy.sh from running if run from any other directory
+- [ ] add transparent background to fullscreen terminal ?
+- [ ] swaylock eyecandy
+	- [ ] add transparency to password indicator
+	- [x] take a screenshot of current screen, blur it, and set as background for swaylock
+- [ ] increased padding for unfocused windows
+- [x] enable git tracking
+- [x] add installation instructions
+- [ ] modify mod+shift+e to give menu to log out reboot poweroff; maybe not needed; use wofi
+- [ ] modify waybar
+	- [ ] add a splitting direction indicator. clicking it switches splitting direction
+	- [ ] move information beside icons to tooltips. clicking on them pulls respective settings (except battery: shows charge on status bar. tooltip shows time remaining)
+- [ ] support floating windows and window pinning
+- [ ] focus follows mouse (already enabled by default?)
+- [ ] modify app launcher
+	- [x] add icons
+	- [x] add transparency
+	- [ ] replace green color with slight dracula-ish purple
+- [ ] add management of bash profile and bashrc
+- [ ] add xdg-mimeapps.list
+- [ ] add help menu
+	- [ ] write in markdown; convert using pandoc to man pages / pdf
+- [ ] add xdg variables from deploy.sh to bash profile if not present already
+- [ ] foot colors
+- [x] modify notifications (mako)
+- [ ] newsboat
+	- [ ] add to dependencies
+	- [ ] add page in help manual
+- [ ] see pywal
+
+## Later
+
+- [ ] remove volume and brightness modules from waybar and use script to show volume bar using notifications
+- [ ] handle notification actions in mako
+- [ ] parse (CSV) file to install packages
+- [ ] look into GNU stow
+- [ ] look into sway notification centre
+- [ ] swayidle using external script
+- [ ] 5 wrong passwords on swaylock hibernate
+- [ ] Simple Settings TUI to :    (see ncurses) or transparent gtk3-gtk4
+	- [ ] use entr to monitor if and when files are changed to monitor functionality of settings app
+	- [ ] display scaling (give warning for fractional scaling, mention xWayland apps will look blurry)
+	- [ ] enable disable window padding
+	- [ ] swayidle timer behavior
+	- [ ] toggle light and dark gtk/kde/firefox themes
+		- [ ] see to make this consistent with flatpak apps
+	- [ ] easily set gtk kde themes
+	- [ ] wifi (nmtui ?) (iwctl ?)
+	- [ ] bluetooth
+	- [ ] wallpaper ;   symlink image as $XDG\_DATA\_DIR/wallpapers/current and lockscreen-current
+		- [ ] enable disable lockscreen blur effect
+	- [ ] notification sound
+	- [ ] check for updates and apply updates
+		- [ ] updates from standard package managers
+		- [ ] flatpak updates
+		- [ ] update to this meta-DE
+	- [ ] change default browser, file manager (set by bash profile as of now)
+	- [ ] change terminal font size
+	- [ ] clicking icons on waybar pulls respective settings screens
+- [ ] Create TUI to manage xdg-defaults
+- [ ] USB and Headphones handling
+	- [ ] see TUI sound managers
+- [ ] handle captive portal logins
+- [ ] Firewall
+- [ ] Offline updates
+- [ ] Get deploy script working on these without DE : (test using virtual machines)
+	- [ ] Fedora
+	- [x] Arch
+	- [ ] Debian
+	Requires implementation of :
+		- [ ] Login Manager (see minimal ones instead of GDM/SDDM)
+		- [ ] Network Manager (iwd instead of NetworkManager?)
+			- [ ] make this accessible from settings TUI
+- [ ] eliminate waybar or rewrite in C or go if possible
+- [ ] make independent of systemd (see artix / void linux)
+- [ ] see alternative app launchers instead of wofi
+- [ ] make IDE config for nvim and keep vim as a minimal editor
+- [ ] migrate from NNN to lf file manager
+	- [x] keybindings for trash
+	- [x] icons
+	- [ ] keybinding to show/hide hidden files (already there?)
+	- [ ] fzf integration
+	- [ ] default apps config/handling
+
+## Maybe
+- [ ] Offline updates
+- [ ] Get deploy script working on these without DE : (test using virtual machines)
+	- [ ] Fedora
+	- [x] Arch
+	- [ ] Debian
+	Requires implementation of :
+		- [ ] Login Manager (see minimal ones instead of GDM/SDDM)
+		- [ ] Network Manager (iwd instead of NetworkManager?)
+			- [ ] make this accessible from settings TUI

@@ -1,0 +1,14 @@
+# User specific environment and startup programs
+export TERMINAL=foot
+export BROWSER=firefox
+export EDITOR=nvim
+export PAGER=less
+export FILEMANAGER="$TERMINAL nnn"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+
+# set nnn to use trash-cli instead of rm -rf
+export NNN_TRASH=1
+
+# Enable wayland in firefox
+MOZ_ENABLE_WAYLAND=1
