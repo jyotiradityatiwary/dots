@@ -1,5 +1,10 @@
 # Sway Dotfiles
 
+## Screenshots
+
+![screenshot 1](screenshots/s1.png)
+![screenshot 2](screenshots/s2.png)
+
 ## Installation
 1) Install base arch
 
