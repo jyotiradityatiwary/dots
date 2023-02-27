@@ -34,3 +34,4 @@ mpv
 mpris
 htop
 fzf
+slurp

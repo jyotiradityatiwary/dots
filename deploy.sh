@@ -8,6 +8,9 @@
 	cp default-wallpaper "$XDG_DATA_HOME"/wallpapers/
 	ln -s "$XDG_DATA_HOME"/wallpapers/default-wallpaper "$XDG_DATA_HOME"/wallpapers/current
 
+## Create directory for screenshots otherwise command defined in sway config will not work
+mkdir -p $HOME/Picrures/Screenshots
+
 # Deploy dotfiles
 mkdir -p "$XDG_CONFIG_HOME"/sway/scripts
 cp sway/config "$XDG_CONFIG_HOME"/sway/config
