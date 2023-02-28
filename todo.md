@@ -3,7 +3,7 @@
 ##  1.0
 
 - [x] add a default wallpaper
-- [ ] typing devnagri script, keybinding for switching scripts
+- [x] typing devnagri script, keybinding for switching scripts
 - [x] lsd and waybar icons
 - [ ] bash vim bindings
 - [ ] in swaylock blurring, instead of saving generated wallpaper to .local/...../lockscreen-current, leave it set to a fallback wallpaper (used only if set using TUI) and else to achieve blur, save it to /tmp/swaylock-wallpaper.sh (or some other name) and remove it on unlock. maybe will speed up by eliminating risk readwrite times
@@ -58,6 +58,7 @@
 - [ ] 5 wrong passwords on swaylock hibernate
 - [ ] Simple Settings TUI to :    (see ncurses) or transparent gtk3-gtk4
 	- [ ] use entr to monitor if and when files are changed to monitor functionality of settings app
+	- [ ] change keyboard layouts
 	- [ ] display scaling (give warning for fractional scaling, mention xWayland apps will look blurry)
 	- [ ] enable disable window padding
 	- [ ] swayidle timer behavior
