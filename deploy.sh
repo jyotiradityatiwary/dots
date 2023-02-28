@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Set defaults if variable is not set
 [ $XDG_CONFIG_HOME ] || XDG_CONFIG_HOME="$HOME/.config"
 [ $XDG_DATA_HOME ] || XDG_DATA_HOME="$HOME/.local/share"
@@ -7,6 +9,7 @@
 	mkdir -p "$XDG_DATA_HOME"/wallpapers
 	cp default-wallpaper "$XDG_DATA_HOME"/wallpapers/
 	ln -s "$XDG_DATA_HOME"/wallpapers/default-wallpaper "$XDG_DATA_HOME"/wallpapers/current
+}
 
 ## Create directory for screenshots otherwise command defined in sway config will not work
 mkdir -p $HOME/Picrures/Screenshots
