@@ -66,7 +66,7 @@
 - [ ] configure window borders for floating windows
     - [ ] use color in accordance with rose pine theme
     - [ ] higlight color for focused window (tiled)
-- [ ] default wallpaper consistent with rose pine
+- [x] default wallpaper consistent with rose pine
 - [ ] `deploy.sh`
     - [ ] use loop to copy dotfiles instead of hardcoding each config directory seperately
     - [ ] generate pkglist.txt based on user input using another file as source
@@ -93,7 +93,9 @@
 	- [ ] easily set gtk kde themes
 	- [ ] wifi (nmtui ?) (iwctl ?)
 	- [ ] bluetooth
-	- [ ] wallpaper ;   symlink image as $XDG\_DATA\_DIR/wallpapers/current and lockscreen-current
+	- [ ] wallpaper ;   symlink image as 
+        - [x]$XDG\_DATA\_DIR/wallpapers/current
+        - [ ]lockscreen-current
 		- [ ] enable disable lockscreen blur effect
 	- [ ] notification sound
 	- [ ] check for updates and apply updates

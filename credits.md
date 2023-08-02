@@ -1,1 +1,3 @@
-default wallpaper from [this post](https://bbs.archlinux.org/viewtopic.php?pid=1931273#p1931273) by baron-digit on archlinux-forums
+# Credits
+
+**Default Wallpaper** ->  Photo by [Kym MacKinnon](https://unsplash.com/@vixenly?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText") on [Unsplash](https://unsplash.com/photos/ohRlkFvO5e8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText")
