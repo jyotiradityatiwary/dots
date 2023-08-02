@@ -11,7 +11,7 @@ XDG_DATA_HOME="$HOME/.local/share"
 
 where `$HOME` is your users home directory.
 
-For now, they can be changed but manual changes will likely be overwritten by a future update. Changing them will become easy once scropts are updated to allow user configuration in `.bash_profile`
+For now, they can be changed but manual changes will likely be overwritten by a future update. Changing them will become easy once scripts are updated to allow user configuration in `.bash_profile`
 
 ##### Q) How to set wallpaper?
 
@@ -20,6 +20,6 @@ Place your wallpapers inside `$XDG_DATA_HOME/wallpapers/`, then symlink them as 
 Here is an example showing how to do this assuming environment variables have default values and you placed your wallpaper in a file called `picture.jpg` :
 
 ```sh
-cd "~/.local/share/wallpapers/picture.jpg"
-ln -sf "picture.jpg" "current"
+cd ~/.local/share/wallpapers/
+ln -srf "picture.jpg" current
 ```
