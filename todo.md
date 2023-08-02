@@ -46,9 +46,29 @@
 	- [ ] add to dependencies
 	- [ ] add page in help manual
 - [ ] see pywal
+- [x] set foot and sway font (sourcecodepro-nerd)
+- [ ] see rose pine theme
+- [ ] fix installation instructions in README.md
+    - [ ] see that user might need to have polkit/seatd configured
+    - [ ] NetworkManager
+    - [ ] man-db, man-pages
+    - [ ] most, lsd, lf, nvim
+- [ ] create help doc / wiki / (man page or pdf or markdown render)
+    - [ ] include in README.md how you can access this help doc
+- [ ] configure aliases
 
 ## Later
 
+- [ ] swayidle
+    - [ ] autolock screeen
+    - [ ] if on battery, turn off display and sleep
+    - [ ] sleep on closing lid
+- [ ] configure window borders for floating windows
+    - [ ] use color in accordance with rose pine theme
+    - [ ] higlight color for focused window (tiled)
+- [ ] default wallpaper consistent with rose pine
+- [ ] change deploy.sh to use loop to copy dotfiles instead of hardcoding each config directory seperately
+- [ ] simple / minimal zsh config (see if needed)
 - [ ] remove volume and brightness modules from waybar and use script to show volume bar using notifications
 - [ ] handle notification actions in mako
 - [ ] parse (CSV) file to install packages
@@ -104,11 +124,3 @@
 
 ## Maybe
 - [ ] Offline updates
-- [ ] Get deploy script working on these without DE : (test using virtual machines)
-	- [ ] Fedora
-	- [x] Arch
-	- [ ] Debian
-	Requires implementation of :
-		- [ ] Login Manager (see minimal ones instead of GDM/SDDM)
-		- [ ] Network Manager (iwd instead of NetworkManager?)
-			- [ ] make this accessible from settings TUI
