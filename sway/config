@@ -22,6 +22,9 @@ output * bg $wallpaper fill
 gaps inner 10
 #smart_gaps on
 
+# Fonts
+font sourcecodepro-nerd Medium 12
+
 # Lock the screen after 300 seconds of inactivity, then turn off
 # all displays after another 300 seconds, and turn the screens back on when
 # resumed. It will also lock the screen before the computer goes to sleep.

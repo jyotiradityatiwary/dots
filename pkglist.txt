@@ -33,3 +33,4 @@ pavucontrol
 htop
 fzf
 slurp
+ttf-sourcecodepro-nerd
