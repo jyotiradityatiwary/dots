@@ -6,7 +6,7 @@
 - [x] typing devnagri script, keybinding for switching scripts
 - [x] lsd and waybar icons
 - [ ] bash vim bindings
-- [ ] in swaylock blurring, instead of saving generated wallpaper to .local/...../lockscreen-current, leave it set to a fallback wallpaper (used only if set using TUI) and else to achieve blur, save it to /tmp/swaylock-wallpaper.sh (or some other name) and remove it on unlock. maybe will speed up by eliminating risk readwrite times
+- [x] in swaylock blurring, instead of saving generated wallpaper to .local/...../lockscreen-current, leave it set to a fallback wallpaper (used only if set using TUI) and else to achieve blur, save it to /tmp/swaylock-wallpaper.sh (or some other name) and remove it on unlock. maybe will speed up by eliminating risk readwrite times
 - [ ] make bottom black bar translucent in zathura
 - [ ] terminal based image viewer (should have touchpad pixel scrolling, inertial scrolling) (feh,sxiv,imv) (see lukesmith's video on sxiv)
 	- [ ] configure for touchpad scrolling
@@ -67,7 +67,13 @@
     - [ ] use color in accordance with rose pine theme
     - [ ] higlight color for focused window (tiled)
 - [ ] default wallpaper consistent with rose pine
-- [ ] change deploy.sh to use loop to copy dotfiles instead of hardcoding each config directory seperately
+- [ ] `deploy.sh`
+    - [ ] use loop to copy dotfiles instead of hardcoding each config directory seperately
+    - [ ] generate pkglist.txt based on user input using another file as source
+        - [ ] this source file should also include documentation for what the package does, or else autofetch description from pacman
+            - [ ] csv format?
+        - [ ] add pkglist.txt to .gitingnore
+    - [ ] warn user if programs from pkglist.txt are missing, list the misssing packages
 - [ ] simple / minimal zsh config (see if needed)
 - [ ] remove volume and brightness modules from waybar and use script to show volume bar using notifications
 - [ ] handle notification actions in mako
