@@ -5,7 +5,7 @@
 - [x] add a default wallpaper
 - [x] typing devnagri script, keybinding for switching scripts
 - [x] lsd and waybar icons
-- [ ] bash vim bindings
+- [x] bash vim bindings
 - [x] in swaylock blurring, instead of saving generated wallpaper to .local/...../lockscreen-current, leave it set to a fallback wallpaper (used only if set using TUI) and else to achieve blur, save it to /tmp/swaylock-wallpaper.sh (or some other name) and remove it on unlock. maybe will speed up by eliminating risk readwrite times
 - [ ] make bottom black bar translucent in zathura
 - [ ] terminal based image viewer (should have touchpad pixel scrolling, inertial scrolling) (feh,sxiv,imv) (see lukesmith's video on sxiv)
