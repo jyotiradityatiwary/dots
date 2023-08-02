@@ -1,6 +1,7 @@
 # Frequently Asked Questions
 
-**Q) What is XDG_CONFIG_HOME, XDG_DATA_HOME, etc?**
+##### Q) What is `$XDG_CONFIG_HOME`, `$XDG_DATA_HOME`, etc?
+
 They are variables (also used inside this script) that determine where different programs place their config files, data files, etc. Unless changed their default values are :
 
 ```sh
@@ -10,7 +11,9 @@ XDG_DATA_HOME="$HOME/.local/share"
 
 where `$HOME` is your users home directory.
 
-1) **How to set wallpaper?**
+For now, they can be changed but manual changes will likely be overwritten by a future update. Changing them will become easy once scropts are updated to allow user configuration in `.bash_profile`
+
+##### Q) How to set wallpaper?
 
 Place your wallpapers inside `$XDG_DATA_HOME/wallpapers/`, then symlink them as `current` in the same directory.
 

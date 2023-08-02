@@ -27,4 +27,6 @@ cd ~/src/dots
 git pull
 ./deploy.sh
 ```
-	
+
+## Help
+See the [FAQ](docs/faq.md)

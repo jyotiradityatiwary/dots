@@ -36,6 +36,7 @@
 	- [x] add transparency
 	- [ ] replace green color with slight dracula-ish purple
 - [ ] add management of bash profile and bashrc
+    - [ ] allow for user constumisation
 - [ ] add xdg-mimeapps.list
 - [ ] add help menu
 	- [ ] write in markdown; convert using pandoc to man pages / pdf
@@ -129,6 +130,7 @@
 	- [ ] keybinding to show/hide hidden files (already there?)
 	- [ ] fzf integration
 	- [ ] default apps config/handling
+- [ ] Update Screemshots
 
 ## Maybe
 - [ ] Offline updates
