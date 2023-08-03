@@ -7,11 +7,8 @@
 - [x] lsd and waybar icons
 - [x] bash vim bindings
 - [x] in swaylock blurring, instead of saving generated wallpaper to .local/...../lockscreen-current, leave it set to a fallback wallpaper (used only if set using TUI) and else to achieve blur, save it to /tmp/swaylock-wallpaper.sh (or some other name) and remove it on unlock. maybe will speed up by eliminating risk readwrite times
-- [ ] make bottom black bar translucent in zathura
-- [ ] terminal based image viewer (should have touchpad pixel scrolling, inertial scrolling) (feh,sxiv,imv) (see lukesmith's video on sxiv)
-	- [ ] configure for touchpad scrolling
-	- [ ] add to dependancies
-- [ ] zathura zoom with touchpad
+- [x] terminal based image viewer 
+	- [x] add to dependancies
 - [ ] add padding
 - [ ] implement suspend functionality. add menu to pick suspend exit shutdown reboot
 	- [ ] closing laptop lid suspends
@@ -134,3 +131,5 @@
 
 ## Maybe
 - [ ] Offline updates
+- [ ] Minimal pdf viewer with touchpad zoom, scrolling, inertial scroll
+- [ ] Minimal Image Viewer with touchpad zoom, pan.
