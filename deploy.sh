@@ -18,16 +18,16 @@ DEFAULT_WALLPAPER_NAME="silhouette-tree-mountain.png"
 
 ## Set default wallpaper if not present
 [ -f "$XDG_DATA_HOME"/wallpapers/current ] || {
-	echo "Setting Wallpaper..."
 	echo "  No wallpaper found at \$XDG_DATA_HOME/wallpapers/current"
 	echo "  Would you like to download and use wallpaper from unsplash?"
 	echo "  (You can change it later)"
 	echo "  Press 'y' to confirm, or 'n' if you would like to exit the script, manually"
 	echo "  place the wallpaper and then re-run this script."
 	read -n1
+	echo ""
 	[ $REPLY ] && [ $REPLY = y ] && {
 		curl "$DEFAULT_WALLPAPER_URL" --output "$XDG_DATA_HOME/wallpapers/$DEFAULT_WALLPAPER_NAME" && {
-			ln --symbolic --relative  "$XDG_DATA_HOME/wallpapers/$DEFAULT_WALLPAPER_NAME" "current"
+			ln --symbolic --relative --verbose  "$XDG_DATA_HOME/wallpapers/$DEFAULT_WALLPAPER_NAME" "$XDG_DATA_HOME/wallpapers/current"
 			echo "Wallpaper set"
 		} || {
 			echo "error: Could not fetch wallpaper." > /dev/stderr
@@ -45,13 +45,7 @@ DEFAULT_WALLPAPER_NAME="silhouette-tree-mountain.png"
 ## Create directory for screenshots otherwise command defined in sway config will not work
 mkdir -p $HOME/Picrures/Screenshots
 
-# Deploy dotfiles
-
-echo "Copying configs to $XDG_CONFIG_HOME..."
-cp --verbose --recursive "files/xdg-config/* " "$XDG_CONFIG_HOME/"
-echo ""
-echo "Copying files to $HOME..."
-cp --verbose --recursive "files/xdg-config/*" "$HOME/"
+### Deploy dotfiles ###
 
 # Rename files from files/home-hidden/FILENAME to .FILENAME and copy them to $HOME
 echo "Copying dotfiles to home folder..."
@@ -60,4 +54,13 @@ do
 	cp --verbose "files/home-hidden/$filename" "$HOME/.$filename"
 done
 
+echo ""
+
+echo "Copying config folders to $XDG_CONFIG_HOME/..."
+for filename in $(ls files/xdg-config/)
+do
+	cp --verbose --recursive "files/xdg-config/$filename" "$XDG_CONFIG_HOME/"
+done
+
+echo ""
 echo "Finished"
