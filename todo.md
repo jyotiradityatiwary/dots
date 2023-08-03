@@ -35,7 +35,7 @@
 	- [x] add icons
 	- [x] add transparency
 	- [ ] replace green color with slight dracula-ish purple
-- [ ] add management of bash profile and bashrc
+- [x] add management of bash profile and bashrc
     - [ ] allow for user constumisation
 - [ ] add xdg-mimeapps.list
 - [ ] add help menu
@@ -69,7 +69,7 @@
     - [ ] higlight color for focused window (tiled)
 - [x] default wallpaper consistent with rose pine
 - [ ] `deploy.sh`
-    - [ ] use loop to copy dotfiles instead of hardcoding each config directory seperately
+    - [x] use loop to copy dotfiles instead of hardcoding each config directory seperately
     - [ ] generate pkglist.txt based on user input using another file as source
         - [ ] this source file should also include documentation for what the package does, or else autofetch description from pacman
             - [ ] csv format?

@@ -1,0 +1,5 @@
+# When interactive bash uses vi mode for input, configure cursor
+# to display as block in command mode and line in editing mode
+set show-mode-in-prompt on
+set vi-cmd-mode-string "\1\e[2 q\2"
+set vi-ins-mode-string "\1\e[6 q\2"

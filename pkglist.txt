@@ -34,3 +34,11 @@ htop
 fzf
 slurp
 ttf-sourcecodepro-nerd
+lf
+wofi
+swaybg
+swayidle
+swaylock
+lsd
+most
+noto-fonts-emoji

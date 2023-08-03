@@ -1,7 +1,16 @@
 #!/bin/sh
 
-DEFAULT_WALLPAPER_URL = "https://images.unsplash.com/photo-1527001219169-937cc716391e?ixlib=rb-4.0.3&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb&amp;dl=kym-mackinnon-ohRlkFvO5e8-unsplash.jpg&amp;w=1920"
-DEFAULT_WALLPAPER_NAME = "silhouette-tree-mountain.png"
+SCRIPT_NAME="deploy.sh"
+
+DEFAULT_WALLPAPER_URL="https://images.unsplash.com/photo-1527001219169-937cc716391e?ixlib=rb-4.0.3&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb&amp;dl=kym-mackinnon-ohRlkFvO5e8-unsplash.jpg&amp;w=1920"
+DEFAULT_WALLPAPER_NAME="silhouette-tree-mountain.png"
+
+# refuse to run if script called from external directory
+[ $0 == "./$SCRIPT_NAME" ] || {
+	echo "Please cd to the directory of the script and run using ./$SCRIPT_NAME"
+	exit 1
+}
+
 
 # Set defaults if variable is not set
 [ $XDG_CONFIG_HOME ] || XDG_CONFIG_HOME="$HOME/.config"
@@ -37,24 +46,18 @@ DEFAULT_WALLPAPER_NAME = "silhouette-tree-mountain.png"
 mkdir -p $HOME/Picrures/Screenshots
 
 # Deploy dotfiles
-echo "Moving sway scripts"
-mkdir -p "$XDG_CONFIG_HOME"/sway/scripts
-cp sway/config "$XDG_CONFIG_HOME"/sway/config
-cp sway/scripts/* "$XDG_CONFIG_HOME"/sway/scripts/
 
-mkdir -p "$XDG_CONFIG_HOME"/foot
-cp foot/foot.ini "$XDG_CONFIG_HOME"/foot/foot.ini
+echo "Copying configs to $XDG_CONFIG_HOME..."
+cp --verbose --recursive "files/xdg-config/* " "$XDG_CONFIG_HOME/"
+echo ""
+echo "Copying files to $HOME..."
+cp --verbose --recursive "files/xdg-config/*" "$HOME/"
 
-mkdir -p "$XDG_CONFIG_HOME"/waybar
-cp waybar/* "$XDG_CONFIG_HOME"/waybar/
-
-mkdir -p "$XDG_CONFIG_HOME"/mako
-cp mako/config "$XDG_CONFIG_HOME"/mako/config
-
-mkdir -p "$XDG_CONFIG_HOME"/wofi
-cp wofi/style.css "$XDG_CONFIG_HOME"/wofi/style.css
-
-mkdir -p "$XDG_CONFIG_HOME"/lf
-cp lf/* "$XDG_CONFIG_HOME"/lf/
+# Rename files from files/home-hidden/FILENAME to .FILENAME and copy them to $HOME
+echo "Copying dotfiles to home folder..."
+for filename in $(ls files/home-hidden/)
+do
+	cp --verbose "files/home-hidden/$filename" "$HOME/.$filename"
+done
 
 echo "Finished"
