@@ -38,4 +38,5 @@ See the [FAQ](docs/faq.md)
 - Script is written with usage inside arch linux in mind. This causes certain dependancies :
     - Package in pkglist.txt have names according to the arch linux official repos. This can be easily modified to work with other distributions by translating the package names.
     - Packages in pkglist.txt may not be present in official repos of other distributions. However scipt works if those packages are installed via any means, eg from alternate package managers, from source, etc.
+    - `files/foot/foot.ini` references theme installed in `/usr/share` which may or may not be shipped by other package managers
     - There are certain dependancies like `NetworkManager`, `systemd-logind`, `polkit`, etc. So, making this script work (as intended and integrate properly) with non GNU/Linux operating systems will require major modifications.

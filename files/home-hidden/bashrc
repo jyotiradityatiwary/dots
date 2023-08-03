@@ -20,3 +20,7 @@ PS1='\[\e[0;93m\]\A \[\e[0;91m\]$? \[\e[0;95m\]\u \[\e[0;1;92m\]\w \[\e[0;1;96m\
 
 # Enables vi mode for editing inside interactive bash shell
 set -o vi
+
+# Show notification on completion of command
+# (works with foot terminal, which supresses these notifications when it is in focus
+PS1="\e]777;notify;Terminal is ready;Command Finished\e\\$PS1"
