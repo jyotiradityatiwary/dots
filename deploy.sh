@@ -43,7 +43,7 @@ DEFAULT_WALLPAPER_NAME="silhouette-tree-mountain.png"
 }
 
 ## Create directory for screenshots otherwise command defined in sway config will not work
-mkdir -p $HOME/Picrures/Screenshots
+mkdir -p $HOME/Pictures/Screenshots
 
 ### Deploy dotfiles ###
 
