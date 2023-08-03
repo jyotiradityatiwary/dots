@@ -9,7 +9,7 @@
 - [x] in swaylock blurring, instead of saving generated wallpaper to .local/...../lockscreen-current, leave it set to a fallback wallpaper (used only if set using TUI) and else to achieve blur, save it to /tmp/swaylock-wallpaper.sh (or some other name) and remove it on unlock. maybe will speed up by eliminating risk readwrite times
 - [x] terminal based image viewer 
 	- [x] add to dependancies
-- [ ] add padding
+- [x] add padding
 - [ ] implement suspend functionality. add menu to pick suspend exit shutdown reboot
 	- [ ] closing laptop lid suspends
 - [ ] implement swaylock and swayidle
@@ -38,7 +38,7 @@
 - [ ] add help menu
 	- [ ] write in markdown; convert using pandoc to man pages / pdf
 - [ ] add xdg variables from deploy.sh to bash profile if not present already
-- [ ] foot colors
+- [x] foot colors
 - [x] modify notifications (mako)
 - [ ] newsboat
 	- [ ] add to dependencies
