@@ -41,5 +41,8 @@ swayidle
 swaylock
 lsd
 most
+noto-fonts
+noto-fonts-extra
 noto-fonts-emoji
+noto-fonts-cjk
 imv
