@@ -2,6 +2,8 @@
 
 # Note : Running `systemctl suspend` automatically locks the screen because of swayidle running $XDG_CONFIG_HOME/sway/scripts/exit.sh
 
+source $XDG_CONFIG_HOME/sway/scripts/vars.sh
+
 # Define t=text and c=commands
 suspend_t='󰤄 Suspend'
 poweroff_t='⏻  Shut Down'
@@ -25,6 +27,6 @@ case $cmd in
 	$reboot_t ) systemctl reboot ;;
 	$exit_t ) swaymsg exit ;;
 	$reload_t ) swaymsg reload ;;
-	$lock_t ) $XDG_CONFIG_HOME/sway/scripts/lockscreen.sh ;;
+	$lock_t ) $lock_cmd ;;
 	* ) echo "Invalid Command" ;;
 esac
