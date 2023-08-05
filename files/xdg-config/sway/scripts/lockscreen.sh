@@ -9,6 +9,7 @@ swayidle \
 grim -s 0.5 /dev/stdout | convert /dev/stdin -blur 0x8 /tmp/lockscreen-blur-wallpaper-tmp
 
 # Locks the screen immediately
-swaylock --image /tmp/lockscreen-blur-wallpaper-tmp
+# Also, pass arguments from this script to swaylock, which is needed to implement '--daemonize'
+swaylock --image /tmp/lockscreen-blur-wallpaper-tmp $@
 # Kills last background task so idle timer doesn't keep running
 kill %%

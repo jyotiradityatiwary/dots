@@ -10,7 +10,7 @@
 - [x] terminal based image viewer 
 	- [x] add to dependancies
 - [x] add padding
-- [ ] implement suspend functionality. add menu to pick suspend exit shutdown reboot
+- [x] implement suspend functionality. add menu to pick suspend exit shutdown reboot
 	- [ ] closing laptop lid suspends
 - [ ] implement swaylock and swayidle
 - [x] add trash-cli to requiremets. enable trashing instead of delete in nnn and lf. copy config to dots dir
@@ -22,12 +22,12 @@
 - [ ] increased padding for unfocused windows
 - [x] enable git tracking
 - [x] add installation instructions
-- [ ] modify mod+shift+e to give menu to log out reboot poweroff; maybe not needed; use wofi
+- [x] modify mod+shift+e to give menu to log out reboot poweroff; maybe not needed; use wofi
 - [ ] modify waybar
 	- [ ] add a splitting direction indicator. clicking it switches splitting direction
 	- [ ] move information beside icons to tooltips. clicking on them pulls respective settings (except battery: shows charge on status bar. tooltip shows time remaining)
 - [ ] support floating windows and window pinning
-- [ ] focus follows mouse (already enabled by default?)
+- [x] focus follows mouse (already enabled by default?)
 - [ ] modify app launcher
 	- [x] add icons
 	- [x] add transparency

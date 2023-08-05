@@ -7,7 +7,7 @@ set $wallpaper $HOME/.local/share/wallpapers/current
 set $lockscreen_wallpeper $HOME/.local/share/wallpapers/lockscreen-current
 set $lock_cmd swaylock --daemonize --image /home/jyotir/.local/share/wallpapers/lockscreen-current
 set $sleep_cmd systemctl suspend
-set $launcher_cmd wofi --show drun --no-actions --insensitive --matching=fuzzy --allow-images --prompt 'Run' | xargs swaymsg "exec -- "
+set $launcher_cmd wofi --show drun --no-actions --insensitive --matching=fuzzy --allow-images --prompt 'Run'
 set $scripts_dir $HOME/.config/sway/scripts
 
 ### Output Configuration ###
@@ -200,7 +200,8 @@ input type:keyboard {
 
 
 # Exit sway (logs you out of your Wayland session)
-bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+# bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+bindsym $mod+Shift+e exec $scripts_dir/exit.sh
 
 
 #
