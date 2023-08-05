@@ -1,12 +1,12 @@
 #! /bin/sh
 
 # Ask for command from user
-cmd=$(echo 'Lock and Suspend
-Shut Down
-Restart
-Exit Sway
-Reload Sway
-Lock Screen' | wofi --dmenu --insensitive --matching=fuzzy --prompt 'Action')
+cmd=$(echo '󰤄 Lock and Suspend
+⏻  Shut Down
+  Restart
+󰗼  Exit Sway
+󰑓  Reload Sway
+󰌾  Lock Screen' | wofi --dmenu --insensitive --matching=fuzzy --prompt 'Action')
 
 # Run command
 case $cmd in
