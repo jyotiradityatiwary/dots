@@ -14,8 +14,7 @@
 	- [ ] closing laptop lid suspends
 - [ ] implement swaylock and swayidle
 - [x] add trash-cli to requiremets. enable trashing instead of delete in nnn and lf. copy config to dots dir
-- [ ] prevent deploy.sh from running if run from any other directory
-- [ ] add transparent background to fullscreen terminal ?
+- [x] prevent deploy.sh from running if run from any other directory
 - [ ] swaylock eyecandy
 	- [ ] add transparency to password indicator
 	- [x] take a screenshot of current screen, blur it, and set as background for swaylock
@@ -133,3 +132,4 @@
 - [ ] Offline updates
 - [ ] Minimal pdf viewer with touchpad zoom, scrolling, inertial scroll
 - [ ] Minimal Image Viewer with touchpad zoom, pan.
+- [ ] add transparent background to fullscreen terminal - (Fullscreen windows don't retain transparency - [This is by design](https://github.com/swaywm/sway/issues/4040#issuecomment-482573499) )
