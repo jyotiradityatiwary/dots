@@ -1,20 +1,30 @@
 #! /bin/sh
 
+# Note : Running `systemctl suspend` automatically locks the screen because of swayidle running $XDG_CONFIG_HOME/sway/scripts/exit.sh
+
+# Define t=text and c=commands
+suspend_t='󰤄 Suspend'
+poweroff_t='⏻  Shut Down'
+reboot_t='  Restart'
+exit_t='󰗼  Exit Sway'
+reload_t='󰑓  Reload Sway'
+lock_t='󰌾  Lock Screen'
+
 # Ask for command from user
-cmd=$(echo '󰤄 Lock and Suspend
-⏻  Shut Down
-  Restart
-󰗼  Exit Sway
-󰑓  Reload Sway
-󰌾  Lock Screen' | wofi --dmenu --insensitive --matching=fuzzy --prompt 'Action')
+cmd=$(echo "$suspend_t
+$poweroff_t
+$reboot_t
+$exit_t
+$reload_t
+$lock_t" | wofi --dmenu --insensitive --matching=fuzzy --prompt 'Action')
 
 # Run command
 case $cmd in
-	'Lock and Suspend' ) $XDG_CONFIG_HOME/sway/scripts/lockscreen.sh --daemonize ; systemctl suspend ;;
-	'Shut Down' )systemctl poweroff ;;
-	'Restart' ) systemctl reboot ;;
-	'Exit Sway' ) swaymsg exit ;;
-	'Reload Sway' ) swaymsg reload ;;
-	'Lock Screen' ) $XDG_CONFIG_HOME/sway/scripts/lockscreen.sh ;;
+	$suspend_t ) systemctl suspend ;;
+	$poweroff_t )systemctl poweroff ;;
+	$reboot_t ) systemctl reboot ;;
+	$exit_t ) swaymsg exit ;;
+	$reload_t ) swaymsg reload ;;
+	$lock_t ) $XDG_CONFIG_HOME/sway/scripts/lockscreen.sh ;;
 	* ) echo "Invalid Command" ;;
 esac
