@@ -4,11 +4,8 @@
 set $mod Mod4
 set $scale 1.25
 set $wallpaper $HOME/.local/share/wallpapers/current
-set $lockscreen_wallpeper $HOME/.local/share/wallpapers/lockscreen-current
-set $lock_cmd swaylock --daemonize --image /home/jyotir/.local/share/wallpapers/lockscreen-current
-set $sleep_cmd systemctl suspend
 set $launcher_cmd wofi --show drun --no-actions --insensitive --matching=fuzzy --allow-images --prompt 'Run'
-set $scripts_dir $HOME/.config/sway/scripts
+set $scripts_dir /home/jyotir/.config/sway/scripts
 
 ### Output Configuration ###
 
@@ -20,28 +17,16 @@ output * bg $wallpaper fill
 
 # Add Gaps
 gaps inner 10
-#smart_gaps on
+smart_gaps on
 
 # Fonts
 font sourcecodepro-nerd Medium 12
 
-# Lock the screen after 300 seconds of inactivity, then turn off
-# all displays after another 300 seconds, and turn the screens back on when
-# resumed. It will also lock the screen before the computer goes to sleep.
-#exec swayidle -w \
-#    timeout 90 '$lock_cmd' \
-#    timeout 120 'swaymsg "output * dpms off"' \
-#    resume 'swaymsg "output * dpms on"' \
-#    timeout 180 '$sleep_cmd' \
-#    before-sleep 'playerctl pause' \
-#    before-sleep '$lock_cmd' \
-#    lock '$lock_cmd'
-#exec swayidle \
-#	before-sleep 'exec $scripts_dir/lockscreen.sh' \
-#	before-sleep 'playerctl pause' \
-#	lock "exec $scripts_dir/lockscreen.sh"
-## NOT WORKING. maybe not built with systemd support
-
+# This script handles locking, turning off display and suspending the system on idle
+# It also handles auto locking the system before it is suspended using systemctl and
+#`loginctl lock-session`. Normally this should not be disabled.
+# Idle can be inhibited using `inhibit_idle` action in sway config, swaymsg, waybar.
+exec $scripts_dir/idle.sh
 
 # Inhibit idle if window in fullscreen #disabled because idle is disabled
 #for_window [shell=".*"] inhibit_idle fullscreen
@@ -65,6 +50,9 @@ input type:keyboard {
     # ralt + " + u --> ü
     xkb_layout us,in
     xkb_options caps:swapescape,compose:ralt,grp:shift_caps_toggle
+    
+    # Enable numlock by default
+    xkb_numlock enabled
 }
 
 ### Key bindings

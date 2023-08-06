@@ -11,8 +11,8 @@
 	- [x] add to dependancies
 - [x] add padding
 - [x] implement suspend functionality. add menu to pick suspend exit shutdown reboot
-	- [ ] closing laptop lid suspends
-- [ ] implement swaylock and swayidle
+	- [x] closing laptop lid suspends
+- [x] implement swaylock and swayidle
 - [x] add trash-cli to requiremets. enable trashing instead of delete in nnn and lf. copy config to dots dir
 - [x] prevent deploy.sh from running if run from any other directory
 - [ ] swaylock eyecandy
@@ -56,10 +56,10 @@
 
 ## Later
 
-- [ ] swayidle
-    - [ ] autolock screeen
+- [x] swayidle
+    - [x] autolock screeen
     - [ ] if on battery, turn off display and sleep
-    - [ ] sleep on closing lid
+    - [x] sleep on closing lid
 - [ ] configure window borders for floating windows
     - [ ] use color in accordance with rose pine theme
     - [ ] higlight color for focused window (tiled)
